@@ -1,5 +1,8 @@
 # Security Report Summary
 
+## Executive Summary
+This report set provides an end-to-end view of prompt-injection risk in tool-using AI agents: `threats.md` enumerates nine attack categories with severity ratings (three Critical, four High, two Med) and identifies indirect injection, confused-deputy privilege escalation, and side-channel data exfiltration as the top-priority risks; `mitigations.md` maps defensive controls — least-privilege tooling, human-in-the-loop approval, egress filtering, memory sanitization, and continuous adversarial testing — onto those threats; and this summary ties both documents to the operational posture in `security-notes.md`. The severity model used here aligns conceptually with **CVSS** (Common Vulnerability Scoring System, the FIRST.org industry standard for vulnerability scoring), where our Critical/High/Med/Low bands roughly correspond to the CVSS v3.1/v4.0 qualitative ranges (Critical ≥ 9.0, High 7.0–8.9, Medium 4.0–6.9, Low 0.1–3.9). Our top-rated threats reflect the same factor weighting CVSS uses — high impact on Confidentiality, Integrity, and Availability; low Attack Complexity; and, for indirect injection, no required user interaction — making this catalog directly translatable into CVSS vectors when individual vulnerabilities are filed downstream.
+
 ## Overview
 This report set documents the prompt-injection and agent-misuse threat surface for AI agents that have access to tools, persistent memory, and external content. It accompanies the higher-level notes in `security-notes.md` and is organized into two companion documents: `threats.md` and `mitigations.md`.
 
